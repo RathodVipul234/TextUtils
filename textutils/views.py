@@ -1,5 +1,6 @@
-# created file by me
+# created file by Keval
 
+# importing necessary modules
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -17,7 +18,7 @@ def analyze(request):
     # Get the text
     djtext = request.POST.get('text', 'default')
 
-    # check checkbox values
+    # Retrieve checkbox values
     removepunc = request.POST.get('removepunc', 'off')
     fullcaps = request.POST.get('fullcaps', 'off')
     newlineremover = request.POST.get('newlineremover', 'off')
@@ -26,7 +27,7 @@ def analyze(request):
 
 
     # Analyze the text
-    # check which checkbox is on
+    # Check which checkbox is on(Clicked)
     if removepunc == "on":
         punctuations = '''!()-{}[];:'"/<>.\,?@#$%^&*_~'''
         analyzed = ""
